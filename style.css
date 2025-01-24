@@ -1,0 +1,154 @@
+
+/*Import Font from googlefont */
+
+/* Family: [Montserrat] */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Family: [Fraunces]*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Varaibles */
+
+:root{
+    --PRIMARYCOLOR:hsl(158, 36%, 37%);
+    --BACKGROUNDCOLOR: hsl(30, 38%, 92%);
+    --MAINFONT:  "Fraunces", serif;
+    --PARAGRAPHFONT: "Montserrat", serif;;
+    --HOVERCOLOR:hsl(158, 79%, 20%);
+}
+
+
+/* General stlyes */
+
+body{
+    display: flex;
+    background-color: var(--BACKGROUNDCOLOR);
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ /* card style */
+.card{
+    background-color: white;
+    max-width: 330px;
+    border-radius: 20px;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_image > img{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.product_info{
+    display: flex;
+    flex-direction: column;
+}
+.product_details{
+    padding: 1.4rem 1.5rem ;
+}
+.item_name{
+    font-family: var(--PARAGRAPHFONT);
+    font-weight: 600;
+    font-size: .7rem;
+    letter-spacing: 5px;
+    color: rgba(0, 0, 0, 0.473);
+    margin-bottom: .6rem;
+}
+.product_name{
+    font-family: var(--MAINFONT);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.product_description{
+    font-family: var(--PARAGRAPHFONT);
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.555);
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.product_price{
+    padding-left: 1.4rem;
+}
+.price{
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+.discount_price{
+    font-family: var(--MAINFONT);
+    color: var(--PRIMARYCOLOR);
+}
+.real_price{
+    font-family: var(--PARAGRAPHFONT);
+    color: rgba(0, 0, 0, 0.473);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration:line-through;
+}
+
+.addCartButton{
+    background-color: var(--PRIMARYCOLOR);
+    border-radius: 10px;
+    margin:1rem 1rem 1rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem ;
+    gap: 1rem;
+}
+.addCartButton > img{
+    color: white;
+    width: 1.1rem;
+
+}
+.addCartButton > p{
+    color: white;
+    font-family: var(--PARAGRAPHFONT);
+    font-weight: 600;
+}
+
+.addCartButton:hover{
+    background-color:var(--HOVERCOLOR) ;
+}
+.Desktop_prodect_image{
+    display: none;
+}
+
+@media (min-width:768px) {
+    .card{
+        max-width: 600px;
+        flex-direction: row;
+        padding-bottom: 0;
+
+    }
+    .Mobile_product_image{
+        display: none;
+    }
+    .Desktop_prodect_image{
+        display:block;
+        border-bottom-left-radius: 20px;
+        
+    }
+    .product_image > img{
+        border-top-right-radius: 0rem;
+        height: 100%;
+        width: 300px;
+    }
+    .addCartButton{
+        margin-top: 1.8rem;
+      
+    }
+
+} 
